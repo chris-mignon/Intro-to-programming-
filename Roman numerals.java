@@ -4,6 +4,7 @@ import java.util.Scanner;
 class Main {
     public static void main(String[] args) {
         int num;
+        //create a scanner object to take input from user
         Scanner obj1 = new Scanner(System.in);
         System.out.println("Enter the number within the range 1~10");
          num = obj1.nextInt();
