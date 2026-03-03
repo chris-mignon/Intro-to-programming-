@@ -5,11 +5,22 @@ using namespace std;
 //method to prompt and obtain input from the user
 void getValues(double &l, double &w)
 {
-    cout<<"Enter the length of the Rectangle"<<endl;
-    cin>>l;
+   cout<<"Enter the length of the Rectangle"<<endl;
     
+    while (!(cin >> l))
+    {  // Keep asking until the user enters a valid number
+  cout << "Invalid input. Try again: \n";
+  cin.clear(); // Reset input errors
+  cin.ignore(10000, '\n'); // Remove bad input
+    }
     cout<<"Enter the width of the Rectangle"<<endl;
-    cin>>w;
+    
+    while (!(cin >> w)) 
+    {  // Keep asking until the user enters a valid number
+  cout << "Invalid input. Try again:\n";
+  cin.clear(); // Reset input errors
+  cin.ignore(10000, '\n'); // Remove bad input
+    }
 }
 
 // method to calculate the area of the rectangle
