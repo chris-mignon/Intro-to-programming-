@@ -6,7 +6,7 @@ using namespace std;
 void getValues(double &l, double &w)
 {
    cout<<"Enter the length of the Rectangle"<<endl;
-    
+    // input validation to ensure user enters a valid number for length
     while (!(cin >> l))
     {  // Keep asking until the user enters a valid number
   cout << "Invalid input. Try again: \n";
@@ -14,7 +14,7 @@ void getValues(double &l, double &w)
   cin.ignore(10000, '\n'); // Remove bad input
     }
     cout<<"Enter the width of the Rectangle"<<endl;
-    
+    // input validation to ensure user enters a valid number for width
     while (!(cin >> w)) 
     {  // Keep asking until the user enters a valid number
   cout << "Invalid input. Try again:\n";
