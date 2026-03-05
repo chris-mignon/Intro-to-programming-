@@ -33,7 +33,7 @@ double findArea(int length, int width)
 {
     return length * width;
 }
-/
+
 double findArea(int length, double width)
 {
     return length * width;
