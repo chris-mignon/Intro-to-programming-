@@ -52,13 +52,16 @@ class Main {
         // Create a Scanner object to read input from the user
         Scanner  keyBoard = new Scanner(System.in);
         
-        //
+        // call the getdoubleInRange method to get the length and width from the user, ensuring they are within the specified range of 5 to 10.
         lenght =getdoubleInRange(keyBoard,lenghtMsg,5,10);
         
-        //System.out.println("Try programiz.pro");
+        // Call the getdoubleInRange method again to get the width from the user, ensuring it is also within the specified range of 5 to 10.
          width = getdoubleInRange(keyBoard,widthMsg,5,10);
          
+         // Call the findArea method to calculate the area of the rectangle using the length and width provided by the user.
          area = findArea(lenght, width);
+
+            // Display the calculated area to the user.
          System.out.println("The area is: "+ area);
     }
 }
