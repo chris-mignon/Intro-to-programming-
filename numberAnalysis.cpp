@@ -6,7 +6,6 @@
 #include <iostream>
 using namespace std;
 
-// Function prototypes
 // Function to find the maximum value in an array
 int findMax(int arr[],int size)
 {
@@ -87,6 +86,9 @@ int main() {
     // Calculate total 
     total = findTotal(numbers,SIZE);
     // Calculate average
+    // Cast total to double to ensure floating-point division for average calculation
+    // This prevents integer division, which would truncate the decimal part and give an incorrect average if total is not perfectly divisible by SIZE.
+    // By casting total to double, we ensure that the division operation produces a floating-point result, allowing for an accurate average calculation even when total is not a multiple of SIZE.
     average = static_cast<double>(total) / SIZE;
     
     // Display results
