@@ -40,7 +40,7 @@ int main() {
     
      cout<<"enter the account number"<<endl;
      cin>>accNbr;
-     if(isValidAccount(accounts,SIZE,accNbr, accIndex )){
+     while(isValidAccount(accounts,SIZE,accNbr, accIndex )){
          cout<<"account valid: proceed\n"<<endl;
          cout<<accountNames[accIndex]<<"\nBalance: $ "<<accountBalances[accIndex]<<endl;
          
@@ -55,7 +55,7 @@ int main() {
          }
          
      }
-     else{
+        if(!isValidAccount(accounts,SIZE,accNbr, accIndex )){
          cout<<"account invalid:check number"<<endl;
      }
      
