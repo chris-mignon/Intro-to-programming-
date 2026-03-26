@@ -11,6 +11,7 @@ float findHighest(float arr[], int size)
  
     return max;
 }
+//method to find the lowest in an array
 float findLowest( float arr[], int size){
    float min = arr[0];
     for (int i = 1; i < size; i++)
