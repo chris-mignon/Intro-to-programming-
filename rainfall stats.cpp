@@ -2,6 +2,17 @@
 #include <iostream>
 using namespace std;
 
+void enterRainFall(float (&arr)[],string month[], int size){
+    for(int i = 0; i < size; i++){
+       cout<<"enter the amount of rainfall in: "<<month[i]<<endl;
+       // Validate input to ensure it's a non-negative number
+       while(!(cin>>arr[i]) || arr[i] < 0){
+           cout<<"Invalid input. Please enter a non-negative number for rainfall in "<<month[i]<<endl;
+           cin.clear(); // Clear the error flag
+           cin.ignore(10000, '\n'); // Discard invalid input
+       }
+   }
+}
 float findHighest(float arr[], int size)
 {
     float max = arr[0];
@@ -25,13 +36,14 @@ float findLowest( float arr[], int size){
 int main() {
     const int SIZE = 12;
     float rainFall[SIZE];
+    string month[SIZE] = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};    
     float average, highest, lowest, total = 0;
    cout<<"Rainfall Statistics"<<endl;
-   
-   for(int i = 0; i < SIZE; i++){
-       cout<<"enter the amount of rain fall in month: "<<i+ 1<<endl;
-       cin>>rainFall[i];
-   }
+
+
+   // get rainfall for each month
+   enterRainFall(rainFall, month, SIZE);
+  
    //find total
    for(int i = 0; i < SIZE; i++){
        total += rainFall[i];
